@@ -43,7 +43,7 @@ Let's have a go at pushing an app with parts written in two programming language
 
 Find out the names of the buildpacks you need to pass to `cf push`, and then deploy the app, taking care to pass the buildpack names in the right order. It is important that the Golang buildpack be last as it starts the web server.
 
-Once its up, verify that the `multi-buildpack-app` is working by visiting the UI in a browser and checking that the text displayed includes the `Hello world!` output of the Ruby script.
+Once it's up, verify that the `multi-buildpack-app` is working by visiting the UI in a browser and checking that the text displayed includes the `Hello world!` output of the Ruby script.
 
 > Note that running multiple build packs requires more system resources, so this step may not be possible in environments with limited resources.
 

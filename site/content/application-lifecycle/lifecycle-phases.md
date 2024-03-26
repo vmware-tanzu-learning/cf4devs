@@ -48,7 +48,7 @@ In such cases, you'll often use `restart`, `restage`, or (re)-`push` to make you
 
 The `--strategy` flag was introduced with v3 of the Cloud Foundry API to enable rolling (zero downtime) deployments, and it is currently the only strategy available, meaning that the strategy flag can either be set to `rolling` or null.
 
-We'll discuss a bit about the context of rolling deployments and compare them to the earlier mechanism of Blue-Green deployments over the next couple of sections. For now, it's just worth noting that the `--strategy` flag enables zero-downtime app updates, and can be used when `restarting`, `restaging`, or re-`pushing`.
+We'll discuss a bit about the context of rolling deployments and compare them to the earlier mechanism of Blue-Green deployments over the next couple of sections. For now, it's just worth noting that the `--strategy` flag enables zero-downtime app updates, and can be used when restarting, restaging, or re-pushing.
 
 ### Restarting
 

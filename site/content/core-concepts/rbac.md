@@ -4,7 +4,7 @@ layout: "docs"
 weight: 2
 ---
 
-Cloud Foundry leverages Role-Based Access Control (RBAC) to restrict user actions that affect resources within the platform. Users can be assigned to roles globally (deployment-wide) or can be assigned to roles in specific orgs and spaces. Roles control what you can do and where you can do it.
+Cloud Foundry leverages Role-Based Access Control (RBAC) to restrict user actions that affect resources within the platform. Users can be assigned to roles globally (foundation-wide) or can be assigned to roles in specific orgs and spaces. Roles control what you can do and where you can do it.
 
 ## Global Roles
 

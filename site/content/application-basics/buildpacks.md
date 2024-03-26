@@ -4,7 +4,7 @@ layout: "docs"
 weight: 3
 ---
 
-Before we continue, let's briefly discuss this "buildpack" thing we have referenced a few times. Buildpacks are responsible for containerizing your application. Essentially, they provide the runtime environment your application needs. The Python buildpack knows how to construct runtime images for Python apps, the Java buildpack for Java, and go buildpack for go-lang, etc. The static file buildpack we have used so far uses nginx to serve static content. 
+Before we continue, let's briefly discuss this "buildpack" thing we have referenced a few times. Buildpacks are responsible for containerizing your application. Essentially, they provide the runtime environment your application needs. The Python buildpack knows how to construct runtime images for Python apps, the Java buildpack for Java, and Go buildpack for Golang, etc. The static file buildpack we have used so far uses nginx to serve static content. 
 
 Buildpacks construct runtime images during the "staging" phase of an application (more on this later).
 

@@ -12,7 +12,7 @@ Each Cloud Foundry deployment has a default internal domain of `apps.internal`. 
 
 ## Creating a Route on the Internal Domain
 
-To demonstrate setting up an internal route, let's move the training app to the `apps.internal` domain. We will then deploy an nginx proxy and enable it to talk to the training app.
+To demonstrate setting up an internal route, let's move the training app to the `apps.internal` domain. We will then deploy an NGINX proxy and enable it to talk to the training app.
 
 ### Moving to an internal domain
 
@@ -32,9 +32,9 @@ At this point, the application cannot be accessed from a browser.
 
 ### Deploying the proxy
 
-A simple nginx proxy is provided in the `proxy` directory along with a manifest. The manifest is parameterized and will require a few variables to be passed:
+A simple NGINX proxy is provided in the `proxy` directory along with a manifest. The manifest is parameterized and will require a few variables to be passed:
 
-* `route` -- The route for nginx; use the external domain and hostname we removed from the training app above
+* `route` -- The route for NGINX; use the external domain and hostname we removed from the training app above
 * `proxied_route` -- The internal route for the training app
 * `proxied_port` -- The internal port (default) for the training app 
 
@@ -52,7 +52,7 @@ If you were to try to access the proxy app now, you would receive a 502 bad gate
 
 ### Network policy
 
-Now the app is only routable from inside of Cloud Foundry, but Cloud Foundry will prevent any app from accessing the static app unless we explicitly allow it through a network policy. This prevents apps that might be deployed by others from accessing internal apps without explicit permission. 
+Now the app is only routable from inside of Cloud Foundry, but Cloud Foundry will prevent any app from accessing the training app unless we explicitly allow it through a network policy. This prevents apps that might be deployed by others from accessing internal apps without explicit permission. 
 
 ```
 cf add-network-policy nginx-proxy training-app

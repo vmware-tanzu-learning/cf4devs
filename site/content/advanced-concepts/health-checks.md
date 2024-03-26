@@ -27,7 +27,7 @@ cf set-health-check <APP-NAME> <HEALTH-CHECK-TYPE> --endpoint <CUSTOM-HTTP-ENDPO
 
 After you set the health check configuration of a deployed app with the `cf set-health-check command`, you must restart the app for the change to take effect.
 
-Let's update the health check type for the `training-app` to use a HTTP health check instead of the default port check:
+Let's update the health check type for the `training-app` to use an HTTP health check instead of the default port check:
 ```
 cf set-health-check training-app http
 ```
@@ -61,7 +61,7 @@ In a separate terminal window, scale the app to one instance:
 cf scale -i 1 training-app
 ```
 
-Then kill the app's process, which will cause the app to stop responding but not terminate the app:
+Then send a `STOP` signal to the app's process, which will cause the app to stop responding but not terminate the app:
 
 ```
 cf ssh training-app -c 'kill -STOP $(pgrep sample-app)'

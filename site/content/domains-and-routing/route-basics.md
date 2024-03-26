@@ -32,7 +32,7 @@ The last argument, `<SOME_UNIQUE_HOSTNAME>`, can be any name that is unique to t
 
 As mentioned earlier in the course, routes must be unique within the Cloud Foundry deployment you are using. Route collisions occur when you try to reserve a route that already exists in another space in the same Cloud Foundry deployment. The `--random-route` flag has been used on numerous occasions in this course as it generates a route name that is unlikely to already be in use.
 
-You are responsible for ensuring your apps avoid route collisions. You can do this by assigning a unique hostname yourself, or you can use the `--random-route` flag. Remember that `--random-route` is not _guaranteed_ to generate a unique name (the name could already be in use), and should be used judiciously in non-real-world scenarios like training or testing.
+You are responsible for ensuring your apps avoid route collisions. You can do this by assigning a unique hostname yourself, or you can use the `--random-route` flag. Remember that `--random-route` is not _guaranteed_ to generate a unique name (the name could already be in use), and should only be used in non-production scenarios like training or testing.
 
 ## Mapping Routes
 

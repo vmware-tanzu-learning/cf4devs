@@ -58,7 +58,7 @@ With `watch`, in one terminal window, start:
 watch -n 0.5 curl -L <ROUTE-TO-YOUR-APP>
 ```
 
-Verify you see "BLUE" in the output. This will curl the app every 0.5 seconds and will allow you to observe the update. 
+Verify you see "BLUE" in the output. This will `curl` the app every 0.5 seconds and will allow you to observe the update. 
 
 In another terminal, you can launch a different watch:
 
@@ -74,7 +74,7 @@ In a separate terminal, update the running application, deploying the updates wi
 cf push --strategy rolling
 ```
 
-In the terminal where you are watching the curl command responses, you will observe that you are routed to both `BLUE` and `GREEN` instances of the app. As more `GREEN` instances are started, you will see more `GREEN` responses until all instances are updated. At this point, you no longer see `BLUE`. In the terminal where you are watching `cf app`, you will also see Cloud Foundry removing and replacing instances.
+In the terminal where you are watching the `curl` command responses, you will observe that you are routed to both `BLUE` and `GREEN` instances of the app. As more `GREEN` instances are started, you will see more `GREEN` responses until all instances are updated. At this point, you no longer see `BLUE`. In the terminal where you are watching `cf app`, you will also see Cloud Foundry removing and replacing instances.
 
 > If you have many app instances, you may not want to wait for all of them to be updated before the CLI returns. You can use the `--no-wait` flag on the push in these cases. When used, the CLI will return after the first updated instance becomes healthy.
 
@@ -98,7 +98,7 @@ Let's change the app, redeploy and cancel the deployment.
 
 - Change the `index.html` to say `RED` and save it.
 - Push the changes, this time also adding the `--no-wait` flag. This way you won't need a third terminal window.
-- When the CLI returns, switch back to the window where you are watching curl responses.
+- When the CLI returns, switch back to the window where you are watching `curl` responses.
 - When you start seeing `RED`, cancel the deployment in the other terminal window with `cf cancel-deployment updating-app`.
 
 You should see the `RED` instances role back to `GREEN`. If you wait too long, you will see a message like "No active deployment found for app." You can try again.
