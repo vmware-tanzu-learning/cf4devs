@@ -8,7 +8,7 @@ Application Security Groups (ASGs) are a collection of egress rules that list pr
 
 ASGs can only be created or updated by admins. However, as ASGs dictate the outbound connectivity allowed, it is important to understand them as a developer.
 
-> Whenever application security groups are added, updated, or removed, you must restart your app for the changes to take effect.
+> Whenever application security groups are added, updated, or removed, you may have to restart your app for the changes to take effect. "Dynamic ASGs" allow security groups to be applied without the need to restart apps, but they are not available in all Cloud Foundry installations.
 
 ## Staging and Running ASGs
 
