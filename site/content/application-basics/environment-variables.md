@@ -8,7 +8,7 @@ Environment variables inject configuration values into applications. As the [12-
 
 ## Preparation
 
-The golang application used in this section will display some basic information about the app itself, including its environment variables.
+The Golang application used in this section will display some basic information about the app itself, including its environment variables.
 
 First, let's deploy the `training-app` using the supplied manifest. Go to the `training-app` directory, then deploy the app:
 
