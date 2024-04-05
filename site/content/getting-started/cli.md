@@ -31,8 +31,6 @@ If you run `cf <command>` without the necessary parameters, the CLI will output 
 
 Try running `cf help -a` to view all of the available `cf` commands, then run the `--help` flag on a couple of commands to familiarize yourself with the help output.
 
-> If you are studying for the Cloud Foundry Certified Developer exam, you can access `cf help` during the exam as the `cf` CLI is installed in the exam system.
-
 ### Aliases
 
 Many commands have aliases (for example, `cf m` as a shortcut for `cf marketplace`). Aliases are listed in the help descriptions. For example, under the `Services integration:` section in `cf help`, you should see:
