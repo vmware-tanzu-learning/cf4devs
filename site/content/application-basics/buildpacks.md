@@ -29,7 +29,7 @@ In addition to the system buildpacks, many Cloud Foundry instances allow you to 
 If enabled, you could deploy the `static-app` using a specific version of a buildpack in Git with:
 
 ```
-cf push -b https://github.com/cloudfoundry/staticfile-buildpack#v1.6.0
+cf push ... -b https://github.com/cloudfoundry/staticfile-buildpack#v1.6.1
 ```
 
 Of course, you would want to add this value to your manifest if you planned to use it. We'll look more at buildpacks later in this course.
