@@ -22,7 +22,7 @@ Go to your application in a browser. Tack on `/kill` to the URL and hit enter. Y
 
 If you go back to your browser, remove the `/kill` from the URL, you should be able to refresh and see that you are only being routed to the live instance. Once the new instance starts up, Cloud Foundry once again load balances across the healthy instances.
 
-> It may be hard to see load balancing across instances because modern browsers optimize the use of connections. They try to keep connections alive, so many requests may be served by a single instance once a connection has been established.
+> It may be hard to see load balancing across instances when only generating traffic from a single browser. Caching, connection keep-alive and the very predictable and even traffic coming from one browser may make it hard to show that requests are, in fact, being served by different instances.
 
 When you are ready, you can stop tailing the logs by hitting `CTRL-C` in the terminal window.
 
