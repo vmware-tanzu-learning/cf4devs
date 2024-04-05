@@ -44,7 +44,7 @@ cf apps --labels 'env=dev,sensitive=true'
 
 The only app shown in the output should be `training-app`.
 
-Like always, labels should be added to the app manifest.
+As with other persistent configuration, labels should be added to the app manifest.
 
 ```
 metadata:
