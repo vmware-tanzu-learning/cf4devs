@@ -4,7 +4,7 @@ layout: "docs"
 weight: 2
 ---
 
-Manifests have been mentioned a handful of times already in this course. In the 'Source Paths' section, we deployed and configured `static-app` entirely via command-line arguments. And while this worked fine for our first deployment, if we wanted to deploy it again in another space or share the configuration with a colleague, we'd need to recall the CLI arguments we used. Sharing CLI commands isn't a very reliable way to deploy our app, especially if something changes in our configuration.
+Manifests have been mentioned a handful of times already in this course. In the *Source Paths* section, we deployed and configured `static-app` entirely via command-line arguments. And while this worked fine for our first deployment, if we wanted to deploy it again in another space or share the configuration with a colleague, we'd need to recall the CLI arguments we used. Sharing CLI commands isn't a very reliable way to deploy our app, especially if something changes in our configuration.
 
 Instead, we use a manifest file to specify values for all configurable parameters. Using a manifest file is a good practice because it can be kept in version control. A version-controlled manifest is consistent and can be shared between developers. It also allows manifest updates to be rolled out to multiple deployments quickly and efficiently, especially when integrated as part of a CI/CD pipeline.
 
@@ -23,7 +23,7 @@ The CLI will generate a manifest file in your current directory.
 
 > Note: the name of the file is `static-app_manifest.yml`, not `manifest.yml`, as it's named after the app. To use this manifest on a push, you need to supply the `-f` flag and the path to the manifest (or rename the file to `manifest.yml`, which is the default that the CLI will look for in the current directory).
 
-Looking at the app manifest, you'll notice it includes the `stack` property. You didn't specify this when you pushed the app, so Cloud Foundry used its default value.
+Looking at the app manifest, you'll notice it includes a number of additional properties such as `stack` . You didn't specify these when you pushed the app, so Cloud Foundry used its default values.
 
 ## Testing the Manifest
 
@@ -36,7 +36,7 @@ cf push -f static-app_manifest.yml
 
 > Try running `cf delete --help` to see what the flags in the command above do.
 
-If you used the exact commands above, the app will not deploy correctly. When you open the app route in a browser, you will see a 403 error. This is the same error you saw in the `Source Paths` section. Open the manifest and see if you can figure out what's wrong.
+If you used the exact commands above, the app will not deploy correctly. When you open the app route in a browser, you will see a 403 error. This is the same error you saw in the *Source Paths* section. Open the manifest and see if you can figure out what's wrong.
 
 > You may not see the 403 error because of browser caching. Refresh the page to see the error.
 
@@ -73,9 +73,12 @@ Variables are declared inside double parenthesis: i.e. `((my-variable))`. To dem
 ---
 applications:
 - name: static-app
+...
+processes:
+- type: web
   instances: ((instances))
-  buildpacks:
-  - staticfile_buildpack
+  memory: 32M
+...
 ...  
 ```
 
