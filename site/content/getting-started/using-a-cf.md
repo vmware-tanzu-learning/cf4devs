@@ -54,8 +54,6 @@ cf login --sso
 
 The CLI will output a URL. Copy and paste this in a browser, and authenticate in exchange for a passcode. You can copy and paste the passcode provided into the terminal window to complete the authentication flow.
 
-> CFCD Exam Tip: The one-time passcode flow requires you to open pages in a browser. For this reason, you should **not** use `cf login --sso` in the exam as it may take you to a non-approved URL.
-
 ### Logging Out
 
 When you authenticate with Cloud Foundry, the CLI caches a token locally. When you make requests (like pushing an app), the CLI includes this token in each request. Therefore you do not have to re-authenticate on every request. You can continue to work until your token expires (and cannot be refreshed); at that point, you would need to re-authenticate. However, this also means you need to be mindful to log out when appropriate to ensure a malicious actor does not gain access to your Cloud Foundry.
