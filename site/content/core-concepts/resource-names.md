@@ -14,7 +14,7 @@ Most resource names you encounter as a developer are scoped to a space. This mea
 
 ## GUIDs
 
-Along with resource names, objects created in Cloud Foundry are assigned a globally unique identifier (GUID). Like resource names, an object's GUID will sometimes be passed to CLI commands. Unlike resource names, guids are globally unique.
+Along with resource names, objects created in Cloud Foundry are assigned a globally unique identifier (GUID). Like resource names, an object's GUID will sometimes be passed to CLI commands. Unlike resource names, GUIDs are globally unique.
 
 ## Renaming
 
