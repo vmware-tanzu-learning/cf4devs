@@ -12,7 +12,7 @@ The `cf` CLI is communicating with the [Cloud Foundry API](https://v3-apidocs.cl
 
 > You can also make requests to the API directly via `cf curl`, but this tends to be more complex. We will speak about `cf curl` a bit more later on.
 
-Throughout this course, we will be using the latest version of the `cf` CLI ([(v8)](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) as of this writing), which supports the latest version of the CF API [(v3)](http://v3-apidocs.cloudfoundry.org). It is important to use `version 8+` of the CLI, as we will be utilizing v3 features throughout the course.
+Throughout this course, we will be using the latest version of the `cf` CLI ([v8](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) as of this writing), which supports the latest version of the CF API [(v3)](http://v3-apidocs.cloudfoundry.org). It is important to use version 8+ of the CLI, as we will be utilizing v3 API features throughout the course.
 
 * If you are using an environment in which the CLI is not installed yet, you can install it by following the [installation instructions](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) for **version 8 of the CLI**.  
 * Ensure you are running **version 8** of the CLI by running `cf version`.
